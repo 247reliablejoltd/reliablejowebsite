@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ==================================================================
+     24/7 RELIABLE JO LIMITED — MANCHESTER
+     Logistics, deliveries, removals & car sales
+     ==================================================================
+     ONE FILE. Words, colours and layout are all in here, so you can
+     edit everything from GitHub with no coding help.
+
+     TO CHANGE ANY WORDING
+       1. Open index.html in GitHub and click the pencil (Edit).
+       2. Change the text that sits BETWEEN the < > tags.
+       3. Commit to main — the live site updates by itself.
+
+     WHEN YOU DOWNLOAD THIS FILE TO EDIT
+       Save it into an EMPTY folder so it stays named exactly index.html.
+       A file that arrives as "index (1).html" will not work.
+
+     THE PHOTOS live in a folder called    next to this file.
+       Upload the  folder to GitHub too. To swap a photo, replace
+       the file in  keeping the SAME name (e.g. move-03.jpg).
+
+     THE PHONE NUMBER appears in many places (top button, hero, every
+       quote button, contact, footer and the sticky bar at the bottom).
+       If it ever changes, use Find (Ctrl/Cmd+F) for 7491011978 and
+       change every one.
+
+     Anything in [square brackets] is a gap — replace it with a real value.
+     ================================================================== -->
+
+<title>24/7 Reliable Jo — Logistics, Deliveries & Removals in Manchester</title>
+<meta name="description" content="Manchester logistics and man &amp; van: pallet and freight delivery, trade and retail deliveries, same-day courier, house removals and car sales. Available 24/7 across England, Scotland, Wales &amp; Northern Ireland. Call +44 7491 011978.">
+<link rel="canonical" href="https://reliablejowebsite.pages.dev/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="24/7 Reliable Jo — Logistics, Deliveries &amp; Removals, Manchester">
+<meta property="og:description" content="Pallets, freight, trade deliveries, same-day courier, removals and car sales across the UK. Manchester-based, available 24/7.">
+<meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#10402D">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="icon-512.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== THE COLOURS — change these six-ish values to reskin the site ===== */
+:root{
+  --navy:#10402D;        /* main brand — deep logo green (kept var name for simplicity) */
+  --navy-dk:#0A2C1F;     /* darker green — nav bar, footer, hovers */
+  --orange:#F26A1B;      /* the vibrant accent — buttons, bars, highlights */
+  --orange-dk:#D4560D;   /* darker orange for hover */
+  --wa:#128C4B;          /* WhatsApp green (keep) */
+  --cream:#F6F3EA;       /* logo cream — header background */
+  --ink:#1B2430;
+  --muted:#586257;
+  --line:#D7DFD7;
+  --page:#F1F4F1;        /* soft page tint */
+  --band:#E7EEE7;        /* alternating section band */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:118px}
+body{margin:0; background:var(--page); color:var(--ink);
+  font-family:'Public Sans',system-ui,sans-serif; font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased}
+img{max-width:100%; display:block; height:auto}
+a{color:var(--navy); text-underline-offset:.18em}
+a:hover{color:var(--orange-dk)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--orange); outline-offset:3px}
+.wrap{width:100%; max-width:1140px; margin:0 auto; padding:0 20px}
+h1,h2,h3{font-family:'Archivo',sans-serif; line-height:1.06; letter-spacing:-.015em; margin:0}
+h2{font-size:clamp(28px,5.2vw,42px); font-weight:800; text-transform:uppercase}
+h3{font-size:20px; font-weight:800}
+p{margin:0 0 16px}
+.lead{font-size:19px; color:var(--ink)}
+.eyebrow{font-family:'Archivo',sans-serif; font-weight:700; text-transform:uppercase;
+  letter-spacing:.16em; font-size:12.5px; color:var(--orange-dk); margin:0 0 8px}
+.bar-underline{height:4px; background:var(--orange); width:72px; border-radius:99px; margin:16px 0 28px}
+section{padding:58px 0}
+.hero{padding-top:0; padding-bottom:0}
+.band{background:var(--band)}
+
+/* ---- header + menu ---- */
+.top{background:var(--cream); position:sticky; top:0; z-index:50; border-bottom:1px solid var(--line)}
+.top .bar{display:flex; align-items:center; gap:14px; padding:10px 20px}
+.logo{display:flex; align-items:center; gap:11px; text-decoration:none}
+.logo img{height:56px; width:auto; display:block}
+.top .call{margin-left:auto; background:var(--navy); color:#fff; text-decoration:none; font-family:'Archivo',sans-serif; font-weight:700; font-size:15px; padding:12px 17px; border-radius:9px; white-space:nowrap}
+.top .call:hover{background:var(--navy-dk); color:#fff}
+.menu{background:var(--navy-dk)}
+.menu ul{list-style:none; margin:0; padding:0; display:flex; gap:2px; overflow-x:auto; scrollbar-width:none}
+.menu ul::-webkit-scrollbar{display:none}
+.menu a{display:block; color:#D7E3F1; text-decoration:none; white-space:nowrap; font-family:'Archivo',sans-serif; font-weight:600; font-size:13.5px; text-transform:uppercase; letter-spacing:.08em; padding:14px 15px; border-bottom:3px solid transparent}
+.menu a:hover{color:#fff; border-bottom-color:var(--orange)}
+.promo{background:var(--navy-dk); color:#fff; text-align:center; font-family:'Public Sans',sans-serif; font-weight:600; font-size:13.5px; line-height:1.4; padding:9px 16px}
+.promo .promo-tag{display:inline-block; background:var(--orange); color:#fff; font-family:'Archivo',sans-serif; font-weight:800; font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; padding:3px 9px; border-radius:99px; margin-right:9px; vertical-align:middle}
+
+/* ---- hero ---- */
+.hero{background:linear-gradient(158deg,#0c3524 0%, var(--navy) 55%, #17553a 100%); color:#fff; overflow:hidden}
+.hero .grid{display:grid; gap:22px; padding:18px 20px 40px}
+.hero .pill{display:inline-flex; align-items:center; gap:8px; background:rgba(242,106,27,.16); color:#ffcaa3;
+  border:1px solid rgba(242,106,27,.5); font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;
+  letter-spacing:.1em; text-transform:uppercase; padding:7px 13px; border-radius:99px}
+.hero .pill .dot{width:8px; height:8px; border-radius:50%; background:var(--orange)}
+.hero h1{font-size:clamp(30px,5.2vw,52px); line-height:1.12; font-weight:900; color:#fff; letter-spacing:-.02em; margin:16px 0 0}
+.hero .sub{font-size:19px; color:#c9d7e6; max-width:52ch; margin:16px 0 0}
+.hero .heroimg{width:100%; border-radius:16px; border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 22px 50px rgba(6,18,33,.5); object-fit:cover; aspect-ratio:4/3}
+.hero .meta{margin:16px 0 0; font-size:14px; color:#9db4cd}
+
+.actions{display:flex; flex-wrap:wrap; gap:11px; margin-top:24px}
+.btn{display:inline-flex; align-items:center; gap:9px; text-decoration:none; font-family:'Archivo',sans-serif;
+  font-weight:700; font-size:16px; padding:14px 21px; border-radius:10px; min-height:50px; line-height:1.2}
+.btn svg{width:19px; height:19px; flex:none}
+.btn-wa{background:var(--wa); color:#fff}
+.btn-wa:hover{background:#0f7a41; color:#fff}
+.btn-primary{background:var(--orange); color:#fff}
+.btn-primary:hover{background:var(--orange-dk); color:#fff}
+.btn-ghost{background:#fff; color:var(--ink); border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--navy); color:var(--navy)}
+.btn-onnavy{background:#fff; color:var(--navy)}
+.btn-onnavy:hover{background:#eaf1f8; color:var(--navy)}
+
+/* ---- trust pills ---- */
+.trust{background:var(--navy-dk); color:#fff; padding:20px 0}
+.trust ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:9px; justify-content:center}
+.trust li{display:flex; align-items:center; gap:8px; border:1px solid #2f5641; border-radius:99px; padding:8px 15px; font-size:13.5px; font-weight:600}
+.trust li b{color:var(--orange)}
+
+/* ---- stats ---- */
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:18px; text-align:center; padding:0 20px}
+.stats .n{margin:0; font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(30px,4vw,40px); color:var(--navy); line-height:1}
+.stats .l{margin:7px 0 0; font-size:14px; color:var(--muted)}
+
+/* ---- service cards ---- */
+.cards{display:grid; gap:16px}
+.svc{background:#fff; border:1px solid var(--line); border-radius:14px; padding:24px; border-top:5px solid var(--orange)}
+.band .svc{background:#fff}
+.svc .ic{width:46px; height:46px; border-radius:11px; display:grid; place-items:center; background:#FDEEE3; color:var(--orange-dk); margin-bottom:14px}
+.svc .ic svg{width:25px; height:25px}
+.svc h3{color:var(--ink)}
+.svc p{margin:10px 0 0; font-size:15.5px; color:var(--muted)}
+.svc.feature{border-top-color:var(--navy); border-top-width:6px; background:linear-gradient(135deg,#fff 0%,#F4F7FA 100%); box-shadow:0 12px 40px rgba(0,0,0,.08); padding:36px 34px}
+.svc.feature .tag{display:inline-block; background:var(--orange); color:#fff; font-family:'Archivo',sans-serif; font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px}
+.svc.feature .ic{width:68px; height:68px; background:var(--navy); color:#fff; margin-bottom:18px}
+.svc.feature .ic svg{width:36px; height:36px}
+.svc.feature h3{font-size:30px; line-height:1.15}
+.svc.feature p{font-size:18px; max-width:64ch; margin-top:14px}
+@media (min-width:760px){ .svc.feature{grid-column:1 / -1; padding:44px 46px} .svc.feature h3{font-size:34px} }
+
+/* ---- gallery ---- */
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px}
+.gallery figure{margin:0; background:#fff; border:1px solid var(--line); border-radius:13px; overflow:hidden}
+.gallery img{width:100%; height:200px; object-fit:cover; background:var(--band)}
+.gallery figcaption{padding:12px 14px; font-size:13.5px; color:var(--ink); font-weight:600; line-height:1.35}
+.gallery figcaption span{display:block; font-family:'Archivo',sans-serif; font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--orange-dk); margin-bottom:3px}
+
+/* ---- how it works ---- */
+.steps{counter-reset:s; list-style:none; margin:0; padding:0}
+.steps li{counter-increment:s; position:relative; padding:0 0 22px 54px; border-left:2px solid var(--line); margin-left:16px}
+.steps li:last-child{border-left-color:transparent; padding-bottom:0}
+.steps li::before{content:counter(s); position:absolute; left:-18px; top:-4px; width:36px; height:36px; border-radius:50%;
+  background:var(--orange); color:#fff; font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; display:grid; place-items:center}
+.steps strong{display:block; font-size:17px; font-family:'Archivo',sans-serif}
+
+/* ---- cars ---- */
+.carsgrid{display:grid; gap:18px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.car{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column}
+.car img{width:100%; height:190px; object-fit:cover; background:var(--band)}
+.car .body{padding:18px 18px 20px}
+.car h3{font-size:19px}
+.car .spec{margin:8px 0 0; font-size:14px; color:var(--muted)}
+.car .price{margin:14px 0 0; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+.car .price b{font-family:'Archivo',sans-serif; font-weight:900; font-size:23px; color:var(--navy)}
+.car .price .was{font-weight:700; font-size:15px; color:var(--muted); text-decoration:line-through; margin-left:6px}
+.car .price a{font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; color:var(--orange-dk); text-decoration:none; white-space:nowrap; background:#FDEEE3; padding:8px 13px; border-radius:8px}
+.car .price a:hover{background:var(--orange); color:#fff}
+.sellbox{background:var(--navy); color:#fff; border-radius:14px; padding:26px; margin-top:22px; display:grid; gap:8px}
+.sellbox h3{color:#fff}
+.sellbox p{color:#cfdcea; margin:0}
+
+/* ---- FAQ ---- */
+.qa{border-top:1px solid var(--line); margin-top:8px}
+.qa details{border-bottom:1px solid var(--line); padding:4px 0}
+.qa summary{cursor:pointer; padding:17px 0; font-weight:700; font-size:17px; list-style:none; display:flex; justify-content:space-between; gap:16px; font-family:'Archivo',sans-serif}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:'+'; font-family:'Archivo',sans-serif; font-size:24px; color:var(--orange); line-height:1}
+.qa details[open] summary::after{content:'\2013'}
+.qa p{padding:0 0 16px; margin:0; font-size:16px; color:var(--muted)}
+
+/* ---- callout ---- */
+.callout{background:var(--navy-dk); color:#fff; text-align:center}
+.callout h2{color:#fff}
+.callout p{color:#cfe0f0; margin:14px auto 0; max-width:56ch}
+.callout .actions{justify-content:center}
+
+/* ---- contact ---- */
+.contact-grid{display:grid; gap:22px}
+.contact-grid dt{font-family:'Archivo',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:.1em; font-size:12px; color:var(--muted)}
+.contact-grid dd{margin:5px 0 18px; font-size:17px}
+.review{background:var(--navy); border-radius:12px; padding:24px; color:#fff}
+.review a{display:inline-block; background:var(--orange); color:#fff; text-decoration:none; font-family:'Archivo',sans-serif; font-weight:700; padding:12px 20px; border-radius:8px; margin-top:12px}
+.review a:hover{background:var(--orange-dk); color:#fff}
+
+/* ---- footer + sticky ---- */
+footer{background:var(--navy-dk); color:#C6D3E0; padding:36px 0 96px; font-size:14.5px}
+footer a{color:#fff}
+footer .motto{font-family:'Archivo',sans-serif; text-transform:uppercase; letter-spacing:.12em; color:#fff; font-size:15px; margin:0 0 8px}
+.sticky{position:fixed; left:0; right:0; bottom:0; z-index:60; display:flex; box-shadow:0 -4px 14px rgba(0,0,0,.16)}
+.sticky a{flex:1; text-align:center; padding:15px 8px; text-decoration:none; color:#fff; font-family:'Archivo',sans-serif; font-weight:700; font-size:15px; min-height:54px}
+.sticky .c{background:var(--navy)} .sticky .w{background:var(--wa)}
+
+/* ---- floating WhatsApp popup ---- */
+.wafab{position:fixed; right:16px; bottom:76px; z-index:70}
+.wafab .fab{width:60px; height:60px; border-radius:50%; background:var(--wa); border:none; display:grid; place-items:center; cursor:pointer; box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.wafab .fab svg{width:33px; height:33px; fill:#fff}
+.wafab .fab::after{content:''; position:absolute; top:6px; right:6px; width:12px; height:12px; border-radius:50%; background:var(--orange); border:2px solid #fff}
+.wafab .card{position:absolute; bottom:74px; right:0; width:300px; max-width:80vw; background:#fff; border-radius:16px; box-shadow:0 20px 48px rgba(0,0,0,.3); overflow:hidden; transform:translateY(12px) scale(.96); opacity:0; pointer-events:none; transition:transform .18s ease, opacity .18s ease}
+.wafab.open .card{transform:none; opacity:1; pointer-events:auto}
+.wafab .hd{background:var(--wa); color:#fff; padding:14px 16px; display:flex; align-items:center; gap:11px}
+.wafab .hd .ava{width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,.22); display:grid; place-items:center; flex:none}
+.wafab .hd .ava svg{width:22px; height:22px; fill:#fff}
+.wafab .hd b{font-family:'Archivo',sans-serif; font-size:14px; display:block; line-height:1.15}
+.wafab .hd small{font-size:11.5px; opacity:.92}
+.wafab .hd .x{margin-left:auto; background:none; border:none; color:#fff; font-size:23px; line-height:1; cursor:pointer; padding:0 2px}
+.wafab .bd{padding:16px}
+.wafab .bubble{background:var(--band); border-radius:13px; border-top-left-radius:3px; padding:12px 14px; font-size:14px; color:var(--ink); margin:0 0 14px}
+.wafab a.start{display:flex; align-items:center; justify-content:center; gap:9px; background:var(--wa); color:#fff; text-decoration:none; font-family:'Archivo',sans-serif; font-weight:700; font-size:14.5px; padding:12px; border-radius:10px}
+.wafab a.start svg{width:19px; height:19px; fill:#fff}
+.wafab a.start:hover{background:#0f7a41; color:#fff}
+@media (min-width:760px){ .wafab{right:22px; bottom:22px} }
+
+@media (min-width:760px){
+  section{padding:80px 0}
+  .hero .grid{grid-template-columns:1.12fr .88fr; align-items:center; padding:56px 20px 62px}
+  .cards{grid-template-columns:1fr 1fr 1fr}
+  .contact-grid{grid-template-columns:1fr 1fr}
+  .menu ul{justify-content:center}
+  footer{padding-bottom:36px}
+  .sticky{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+
+<body>
+
+<!-- ===== PROMO BAR — edit the words, or delete this whole <div> to remove ===== -->
+<div class="promo"><span class="promo-tag">Save 5%</span> 5% off your first booking &mdash; new customers, just mention the website when you get in touch.</div>
+
+<!-- ============ HEADER + MENU ============ -->
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="24/7 Reliable Jo — Man &amp; Van, Moving &amp; Delivery">
+      <img src="logo.png" alt="Man &amp; Van — Moving &amp; Delivery logo">
+    </a>
+    <a class="call" href="tel:+447491011978">Call us</a>
+  </div>
+  <nav class="menu" aria-label="Jump to a section">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Recent jobs</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#cars">Cars sold</a></li>
+      <li><a href="#why">Why us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="pill"><span class="dot"></span> Available 24 hours, 7 days</span>
+      <h1>Logistics that moves when you need it &mdash; pallets, freight and removals, anywhere in the UK</h1>
+      <p class="sub">From a single pallet off a forklift to a full house move. Four years on the road, over a million miles driven, every corner of the UK covered. We give you the price before we start and turn up when we said we would.</p>
+      <div class="actions">
+        <a class="btn btn-wa" href="https://wa.me/447491011978?text=Hi%2024%2F7%20Reliable%20Jo%2C%20please%20can%20I%20get%20a%20quote%3F%20Here%20is%20what%20I%20need%3A">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.5 14c-.2.6-1.2 1.2-1.7 1.2s-1.1.2-3.6-.9-4-3.6-4.2-3.8-1.3-1.7-1.3-3.3.8-2.3 1.1-2.6a1 1 0 0 1 .8-.4h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7s.7 1.2 1.5 1.9c1 .9 1.8 1.1 2.1 1.3s.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.9.9c.3.1.5.2.5.4a2 2 0 0 1-.1 1.4Z"/></svg>
+          Get a quote on WhatsApp
+        </a>
+        <a class="btn btn-onnavy" href="tel:+447491011978">Call +44 7491 011978</a>
+      </div>
+      <p class="meta">Based in Manchester &middot; England, Scotland, Wales &amp; Northern Ireland</p>
+    </div>
+    <div>
+      <!-- HERO PHOTO — your own vans. Swap the file in  keeping the name to change it -->
+      <img class="heroimg" src="fleet.jpg" alt="The 24/7 Reliable Jo fleet — a Luton box van and a panel van, ready to work in Manchester" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAND ============ -->
+<div class="trust"><div class="wrap"><ul>
+  <li>Available <b>24/7</b></li>
+  <li>Fixed price before we start</li>
+  <li>Pallets to house moves</li>
+  <li>England, Scotland, Wales &amp; Northern Ireland</li>
+</ul></div></div>
+
+<!-- ============ STATS ============ -->
+<section style="padding:44px 0">
+  <div class="wrap stats">
+    <div><p class="n">4+ years</p><p class="l">On the road</p></div>
+    <div><p class="n">1m+ miles</p><p class="l">Driven and counting</p></div>
+    <div><p class="n">All&nbsp;4</p><p class="l">UK nations covered</p></div>
+    <div><p class="n">24/7</p><p class="l">Any hour, any day</p></div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="band">
+  <div class="wrap">
+    <p class="eyebrow">What we move</p>
+    <h2>Our services</h2>
+    <div class="bar-underline"></div>
+    <div class="cards">
+
+      <article class="svc feature">
+        <span class="tag">Our most-booked service</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg></div>
+        <h3>Man &amp; Van with House Removals</h3>
+        <p>One man and a van, or two if the job needs it. A single sofa, a flat, or a full house &mdash; we load, drive and unload with care, and place everything in the room you want.</p>
+      </article>
+
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h1"/><path d="M15 18h5a1 1 0 0 0 1-1v-3.3a1 1 0 0 0-.4-.8l-3.6-2.7A1 1 0 0 0 16.4 10H14"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
+        <h3>Pallet &amp; freight delivery</h3>
+        <p>A single pallet or a full van load. We collect straight off the forklift, shrink-wrap and strap the load, and deliver it secure &mdash; day or night, across the UK.</p>
+      </article>
+
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Business, trade &amp; retail deliveries</h3>
+        <p>Wholesale stock, shop restocks, AV and office equipment. We run regular collections and drops for Manchester traders, warehouses and shops, and work around your opening hours.</p>
+      </article>
+
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+        <h3>Same-day courier &amp; airport runs</h3>
+        <p>One item that has to be there today. A booked slot, a direct drive and no depot stops &mdash; including collections and drop-offs at any location for parts and paperwork that can't wait.</p>
+      </article>
+
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Specialist &amp; time-critical goods</h3>
+        <p>Fragile, oversized, crated and awkward loads that need extra care &mdash; wrapped, secured and handled properly, on a booked window that suits you.</p>
+      </article>
+
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.6-4.6A2 2 0 0 1 8.5 7h7a2 2 0 0 1 1.9 1.4L19 13"/><path d="M4 13h16v4h-2v-1H6v1H4z"/><circle cx="7.5" cy="16.5" r="1.4"/><circle cx="16.5" cy="16.5" r="1.4"/></svg></div>
+        <h3>Buying &amp; selling cars</h3>
+        <p>Our second business. We buy and sell used cars, checked over and ready to drive. Come and view a car at our Manchester office before you buy, or sell us yours for a fair, straight price.</p>
+      </article>
+
+    </div>
+    <div class="actions">
+      <a class="btn btn-wa" href="https://wa.me/447491011978?text=Hi%2024%2F7%20Reliable%20Jo%2C%20please%20can%20I%20get%20a%20quote%3F">Get a quote</a>
+      <a class="btn btn-ghost" href="tel:+447491011978">Call +44 7491 011978</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECENT JOBS (real photos) ============ -->
+<!-- To change a photo: replace the file in  keeping the same name.
+     To change a caption: edit the text between the <figcaption> tags. -->
+<section id="work">
+  <div class="wrap">
+    <p class="eyebrow">Loads we've carried</p>
+    <h2>Recent jobs</h2>
+    <div class="bar-underline"></div>
+    <p class="lead" style="max-width:60ch">Real loads from real weeks &mdash; palletised freight, trade stock, event kit, crated parts and full house moves. If it fits in a van and it needs to be somewhere, we've probably carried something like it.</p>
+    <div class="gallery" style="margin-top:26px">
+      <figure><img src="move-17.jpg" alt="Van packed tight with bags, suitcases and boxes for a full house move" loading="lazy"><figcaption><span>House move</span>Full house move &mdash; packed tight and secured</figcaption></figure>
+      <figure><img src="move-01.jpg" alt="Van stacked with cardboard boxes of stock" loading="lazy"><figcaption><span>Stock delivery</span>Boxed stock, loaded and delivered</figcaption></figure>
+      <figure><img src="move-04.jpg" alt="Large 65-inch AV display boxed and loaded upright in a van at a trade unit" loading="lazy"><figcaption><span>Trade delivery</span>65-inch AV display, delivered to a trade unit</figcaption></figure>
+      <figure><img src="move-03.jpg" alt="Stacked woven wicker baskets and white sacks loaded in a box van" loading="lazy"><figcaption><span>Goods delivery</span>Woven baskets and sacks, delivered</figcaption></figure>
+      <figure><img src="move-11.jpg" alt="Boxed equipment ready for delivery" loading="lazy"><figcaption><span>Equipment delivery</span>Equipment delivered and checked</figcaption></figure>
+      <figure><img src="move-08.jpg" alt="Van delivering stock to a retail shop out of hours" loading="lazy"><figcaption><span>Retail restock</span>Shop restock, out of hours</figcaption></figure>
+      <figure><img src="move-06.jpg" alt="Box van loaded with a drum kit, PA speakers and staging truss" loading="lazy"><figcaption><span>Event kit</span>Full band rig &mdash; drums, PA and staging truss</figcaption></figure>
+      <figure><img src="move-14.jpg" alt="Van loaded with a boxed consignment" loading="lazy"><figcaption><span>Consignment</span>Boxed consignment, cleared and delivered</figcaption></figure>
+      <figure><img src="move-12.jpg" alt="Wooden crate containing an engineering part loaded in a van" loading="lazy"><figcaption><span>Crated parts</span>Crated part, moved on a booked window</figcaption></figure>
+      <figure><img src="move-10.jpg" alt="Shrink-wrapped pallet lifted by forklift into a van" loading="lazy"><figcaption><span>Depot collection</span>Pallet taken straight off the forklift</figcaption></figure>
+      <figure><img src="move-09.jpg" alt="Wooden crate with hazard label loaded in a van" loading="lazy"><figcaption><span>Crated parts</span>Crated part, moved on a booked window</figcaption></figure>
+      <figure><img src="move-05.jpg" alt="Large black shrink-wrapped item secured in a van" loading="lazy"><figcaption><span>Bulky item</span>Bulky item, wrapped and secured for transport</figcaption></figure>
+      <figure><img src="move-16.jpg" alt="Forklift loading goods into a van at a depot" loading="lazy"><figcaption><span>Depot collection</span>Loaded straight off the forklift</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" class="band">
+  <div class="wrap">
+    <p class="eyebrow">Getting a job booked</p>
+    <h2>How it works</h2>
+    <div class="bar-underline"></div>
+    <ol class="steps">
+      <li><strong>Tell us the job</strong>Message on WhatsApp or call. Give us the collection and delivery postcodes, what's moving, and when you need it.</li>
+      <li><strong>Get a fixed price</strong>We send a clear quote up front. The figure we agree is the figure you pay &mdash; no surprises on the day.</li>
+      <li><strong>We turn up on time</strong>We arrive in the window we booked, load carefully, and drive it straight to where it's going.</li>
+      <li><strong>Job done, proof sent</strong>We place or hand over the load and can send a photo or signature as proof of delivery. Pay by cash or bank transfer.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CARS FOR SALE (second business) ============ -->
+<!-- CARS BLOCK — the cards below are cars you've RECENTLY SOLD (proof of trade).
+     Each photo (car-01.jpg ... car-05.jpg) already has the number plate
+     blurred and a SOLD stamp on it.
+     TO ADD A CAR THAT IS FOR SALE NOW:
+       1. Copy one <article class="car"> block.
+       2. Put its photo in  (e.g. car-06.jpg) and point src at it.
+       3. Remove the "was" price, change the link to "Ask about this car".
+     TO REMOVE A SOLD CAR: delete its whole <article class="car"> ... </article>. -->
+<section id="cars">
+  <div class="wrap">
+    <p class="eyebrow">Our second business</p>
+    <h2>Cars sold</h2>
+    <div class="bar-underline"></div>
+    <p class="lead" style="max-width:66ch">Alongside the logistics, we buy and sell used cars &mdash; checked over, priced fair, and moved on quickly. Cars start from &pound;500, and we take cash or bank transfer. Here are a few we've sold recently &mdash; ask what's in the yard now, or come and view at our Manchester office before you buy.</p>
+
+    <div class="carsgrid" style="margin-top:26px">
+      <article class="car">
+        <img src="car-01.jpg" alt="2010 Mercedes-Benz A-Class, sold" loading="lazy">
+        <div class="body">
+          <h3>2010 Mercedes-Benz A-Class</h3>
+          <p class="spec">Hatchback &middot; sold in Manchester</p>
+          <div class="price"><span><b>&pound;2,200</b><span class="was">&pound;2,950</span></span><a href="https://wa.me/447491011978?text=Hi%2C%20do%20you%20have%20anything%20like%20the%20Mercedes%20A-Class%20in%20stock%3F">Want one like it?</a></div>
+        </div>
+      </article>
+      <article class="car">
+        <img src="car-02.jpg" alt="2015 Peugeot 108, sold" loading="lazy">
+        <div class="body">
+          <h3>2015 Peugeot 108</h3>
+          <p class="spec">1.0 &middot; 44,000 miles &middot; ULEZ compliant</p>
+          <div class="price"><span><b>&pound;2,150</b><span class="was">&pound;2,850</span></span><a href="https://wa.me/447491011978?text=Hi%2C%20do%20you%20have%20anything%20like%20the%20Peugeot%20108%20in%20stock%3F">Want one like it?</a></div>
+        </div>
+      </article>
+      <article class="car">
+        <img src="car-03.jpg" alt="2003 Audi A4, sold" loading="lazy">
+        <div class="body">
+          <h3>2003 Audi A4</h3>
+          <p class="spec">Saloon &middot; well looked after &middot; sold in Manchester</p>
+          <div class="price"><span><b>&pound;600</b></span><a href="https://wa.me/447491011978?text=Hi%2C%20do%20you%20have%20anything%20like%20the%20Audi%20A4%20in%20stock%3F">Want one like it?</a></div>
+        </div>
+      </article>
+      <article class="car">
+        <img src="car-04.jpg" alt="2012 Ford Ka, sold" loading="lazy">
+        <div class="body">
+          <h3>2012 Ford Ka</h3>
+          <p class="spec">1.2 Studio &middot; 12 months MOT &middot; ULEZ compliant</p>
+          <div class="price"><span><b>&pound;1,100</b><span class="was">&pound;1,450</span></span><a href="https://wa.me/447491011978?text=Hi%2C%20do%20you%20have%20anything%20like%20the%20Ford%20Ka%20in%20stock%3F">Want one like it?</a></div>
+        </div>
+      </article>
+      <article class="car">
+        <img src="car-05.jpg" alt="Peugeot, sold" loading="lazy">
+        <div class="body">
+          <h3>Peugeot</h3>
+          <p class="spec">Sold in Manchester</p>
+          <div class="price"><span><b>&pound;1,650</b><span class="was">&pound;2,150</span></span><a href="https://wa.me/447491011978?text=Hi%2C%20do%20you%20have%20a%20Peugeot%20like%20this%20in%20stock%3F">Want one like it?</a></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="sellbox">
+      <h3>Selling your car?</h3>
+      <p>Send us the make, model, year, mileage and a few photos on WhatsApp. We'll come back with a fair offer &mdash; and if it's right, we can collect it.</p>
+      <div class="actions" style="margin-top:14px">
+        <a class="btn btn-primary" href="https://wa.me/447491011978?text=Hi%2C%20I%27d%20like%20to%20sell%20my%20car.%20Here%20are%20the%20details%3A">Sell us your car</a>
+        <a class="btn btn-onnavy" href="#contact">Visit our office</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section id="why" class="band">
+  <div class="wrap">
+    <p class="eyebrow">Why 24/7 Reliable Jo</p>
+    <h2>Reliable is in the name</h2>
+    <div class="bar-underline"></div>
+    <p class="lead" style="max-width:64ch">In four years we've driven more than a million miles and worked in every country of the UK. That mileage is what "reliable" means: we know the roads, we know how to load a job so it arrives in one piece, and we're on the phone whatever the hour.</p>
+    <div class="cards" style="margin-top:22px">
+      <article class="svc" style="border-top-color:var(--navy)"><h3>We turn up on time</h3><p>The whole point of hiring us is that we're there in the window we booked. That's the promise the name is built on.</p></article>
+      <article class="svc" style="border-top-color:var(--navy)"><h3>You know the price first</h3><p>We agree the cost before we lift a thing, so the figure at the end is the one you expected.</p></article>
+      <article class="svc" style="border-top-color:var(--navy)"><h3>Loaded properly, every time</h3><p>Wrapped, strapped and blanket-protected. Pallets, fragile kit and household goods handled like our own.</p></article>
+    </div>
+
+    <h3 style="margin-top:36px">Questions people ask</h3>
+    <div class="qa">
+      <details><summary>How much will my job cost?</summary><p>It depends on the distance, the size of the load and how many people it needs. Send the details on WhatsApp and we'll give you a clear price before you book.</p></details>
+      <details><summary>Are you really available 24/7?</summary><p>Yes. Early mornings, late nights, weekends and overnight runs &mdash; call or message any time and we'll tell you the soonest we can be there.</p></details>
+      <details><summary>Do you cover long distances?</summary><p>Yes. Local jobs across Greater Manchester and long-distance runs anywhere in the UK &mdash; we've worked in England, Scotland, Wales and Northern Ireland.</p></details>
+      <details><summary>Can you handle pallets and business freight?</summary><p>Yes. We collect off forklifts, wrap and strap palletised loads, and run regular deliveries for traders, warehouses and shops. Tell us the weight and dimensions and we'll match the right van.</p></details>
+      <details><summary>How do I pay?</summary><p>Whichever is easier for you &mdash; cash on the day or bank transfer. Your price is agreed before we start, so the number you're quoted is the number you pay.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT PEOPLE SAY (real names + permission only) ============ -->
+<section id="voices">
+  <div class="wrap">
+    <p class="eyebrow">What people say</p>
+    <h2>In their own words</h2>
+    <div class="bar-underline"></div>
+    <div class="cards">
+      <article class="svc" style="border-top-color:var(--navy)"><p style="font-style:italic;color:var(--ink);margin:0">&ldquo;Booked them for a last-minute flat move and they were outside within the hour. Two lads, everything wrapped, not a mark on the furniture &mdash; and I paid exactly what they quoted, no extras at the door.&rdquo;</p><p style="margin-top:12px;margin-bottom:0"><strong>Josh</strong> &mdash; House move, Manchester</p></article>
+      <article class="svc" style="border-top-color:var(--navy)"><p style="font-style:italic;color:var(--ink);margin:0">&ldquo;Needed a pallet and some furniture run down to Bristol overnight. Clear price up front, updates the whole way, and it landed first thing as promised. They&rsquo;re my first call for shop deliveries now.&rdquo;</p><p style="margin-top:12px;margin-bottom:0"><strong>Mattew</strong> &mdash; Pallet &amp; furniture, Bristol</p></article>
+      <article class="svc" style="border-top-color:var(--navy)"><p style="font-style:italic;color:var(--ink);margin:0">&ldquo;Drove a full van load all the way up to Scotland for me over a weekend. On time at both ends and every item strapped down properly. Honestly the most reliable courier I&rsquo;ve dealt with.&rdquo;</p><p style="margin-top:12px;margin-bottom:0"><strong>Liam</strong> &mdash; Long-distance move, Scotland</p></article>
+    </div>
+    <!-- These testimonials are customer-supplied. Add more by copying one <article> block. -->
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="band">
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h2>Get your quote</h2>
+    <div class="bar-underline"></div>
+    <dl class="contact-grid">
+      <div>
+        <dt>Office &amp; car viewing</dt>
+        <dd>Flat 66 West View Court,<br>West View Road,<br>Manchester M22 4LG<br>
+          <span style="font-size:14px;color:var(--muted)">Come and view cars here before you buy</span></dd>
+        <dt>Directions</dt>
+        <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=West+View+Court+West+View+Road+Manchester+M22+4LG">Open in Google Maps</a></dd>
+        <dt>Area covered</dt>
+        <dd>Greater Manchester and long-distance across the UK</dd>
+        <dt>Hours</dt>
+        <dd>Available 24 hours, 7 days a week</dd>
+      </div>
+      <div>
+        <dt>Phone</dt>
+        <dd><a href="tel:+447491011978">+44 7491 011978</a></dd>
+        <dt>WhatsApp</dt>
+        <dd><a href="https://wa.me/447491011978?text=Hi%2024%2F7%20Reliable%20Jo%2C%20please%20can%20I%20get%20a%20quote%3F">+44 7491 011978</a></dd>
+        <dt>Email</dt>
+        <dd><a href="mailto:247reliablejoltd@gmail.com">247reliablejoltd@gmail.com</a></dd>
+      </div>
+    </dl>
+
+    <!-- Add once a Google Business Profile is verified and you have the review link -->
+    <div class="review">
+      <p style="margin:0 0 4px;font-family:'Archivo',sans-serif;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#ffcaa3">Used us before?</p>
+      <h3 style="margin:0;color:#fff">Leave us a review</h3>
+      <p style="margin:8px 0 0;color:#dbe6f2">A few words on Google helps other people in Manchester find us.</p>
+      <a href="[GOOGLE REVIEW LINK]">Write a Google review</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALL TO ACTION ============ -->
+<section class="callout">
+  <div class="wrap">
+    <h2>Need a van today?</h2>
+    <p>Message or call any time &mdash; we're available 24/7 and we'll tell you the soonest we can be there.</p>
+    <div class="actions">
+      <a class="btn btn-wa" href="https://wa.me/447491011978?text=Hi%2024%2F7%20Reliable%20Jo%2C%20please%20can%20I%20get%20a%20quote%3F">Get a quote on WhatsApp</a>
+      <a class="btn btn-onnavy" href="tel:+447491011978">Call +44 7491 011978</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <p class="motto">24/7 Reliable Jo Limited</p>
+    <p>Pallet &amp; freight delivery, trade and retail deliveries, same-day courier, man &amp; van, removals and car sales across Manchester and the UK.<br>
+       Available 24/7 &middot; <a href="tel:+447491011978">+44 7491 011978</a></p>
+    <p>Flat 66 West View Court, West View Road, Manchester M22 4LG</p>
+    <p style="opacity:.8">Registered in England &amp; Wales &middot; Company No. 15756125</p>
+    <p style="margin-top:18px;opacity:.75">Website designed by <a href="mailto:info@genixhr.com">GenixHR</a> &middot; info@genixhr.com</p>
+  </div>
+</footer>
+
+<!-- Small helper: if a photo file is missing, show a tidy labelled tile
+     instead of a broken-image icon. Nothing to edit here. -->
+<script>
+document.querySelectorAll('img').forEach(function(img){
+  img.addEventListener('error', function(){
+    var t = document.createElement('div');
+    t.textContent = (img.getAttribute('alt') || 'Photo').replace(/^\[|\]$/g,'') || 'Add a photo';
+    t.style.cssText = 'display:grid;place-items:center;text-align:center;padding:16px;'
+      + 'min-height:'+(img.offsetHeight||190)+'px;background:repeating-linear-gradient(135deg,#e7eef6,#e7eef6 12px,#dfe8f2 12px,#dfe8f2 24px);'
+      + 'color:#59657A;font:600 13px/1.4 Public Sans,sans-serif;border-radius:inherit';
+    img.replaceWith(t);
+  });
+});
+</script>
+
+<!-- ===== FLOATING WHATSAPP POPUP — the number is 447491011978 ===== -->
+<div class="wafab" id="wafab">
+  <div class="card" role="dialog" aria-label="Chat with 24/7 Reliable Jo on WhatsApp">
+    <div class="hd">
+      <span class="ava"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.5 14c-.2.6-1.2 1.2-1.7 1.2s-1.1.2-3.6-.9-4-3.6-4.2-3.8-1.3-1.7-1.3-3.3.8-2.3 1.1-2.6a1 1 0 0 1 .8-.4h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7s.7 1.2 1.5 1.9c1 .9 1.8 1.1 2.1 1.3s.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.9.9c.3.1.5.2.5.4a2 2 0 0 1-.1 1.4Z"/></svg></span>
+      <div><b>24/7 Reliable Jo</b><small>Typically replies in a few minutes</small></div>
+      <button class="x" id="waClose" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="bd">
+      <p class="bubble">Hi there! Need a quote or a van today? Send us a message and we'll get straight back to you &mdash; any hour, any day.</p>
+      <a class="start" href="https://wa.me/447491011978?text=Hi%2024%2F7%20Reliable%20Jo%2C%20please%20can%20I%20get%20a%20quote%3F%20Here%20is%20what%20I%20need%3A">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.5 14c-.2.6-1.2 1.2-1.7 1.2s-1.1.2-3.6-.9-4-3.6-4.2-3.8-1.3-1.7-1.3-3.3.8-2.3 1.1-2.6a1 1 0 0 1 .8-.4h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7s.7 1.2 1.5 1.9c1 .9 1.8 1.1 2.1 1.3s.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.9.9c.3.1.5.2.5.4a2 2 0 0 1-.1 1.4Z"/></svg>
+        Start chat on WhatsApp
+      </a>
+    </div>
+  </div>
+  <button class="fab" id="waFab" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.5 14c-.2.6-1.2 1.2-1.7 1.2s-1.1.2-3.6-.9-4-3.6-4.2-3.8-1.3-1.7-1.3-3.3.8-2.3 1.1-2.6a1 1 0 0 1 .8-.4h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7s.7 1.2 1.5 1.9c1 .9 1.8 1.1 2.1 1.3s.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.9.9c.3.1.5.2.5.4a2 2 0 0 1-.1 1.4Z"/></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('wafab'), b=document.getElementById('waFab'), x=document.getElementById('waClose');
+  b.addEventListener('click', function(e){ e.stopPropagation(); f.classList.toggle('open'); });
+  x.addEventListener('click', function(e){ e.stopPropagation(); f.classList.remove('open'); });
+  document.addEventListener('click', function(e){ if(!f.contains(e.target)) f.classList.remove('open'); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') f.classList.remove('open'); });
+})();
+</script>
+
+<div class="sticky">
+  <a class="c" href="tel:+447491011978">Call us</a>
+  <a class="w" href="https://wa.me/447491011978?text=Hi%2024%2F7%20Reliable%20Jo%2C%20please%20can%20I%20get%20a%20quote%3F">WhatsApp a quote</a>
+</div>
+
+<!-- ============ SEARCH ENGINE DATA — edit carefully ============ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":["MovingCompany","LocalBusiness"],
+      "name":"24/7 Reliable Jo Limited",
+      "url":"https://reliablejowebsite.pages.dev/",
+      "description":"Manchester logistics and man & van: pallet and freight delivery, trade and retail deliveries, same-day courier, house removals and car sales. Available 24/7 across the UK.",
+      "telephone":"+447491011978",
+      "email":"247reliablejoltd@gmail.com",
+      "areaServed":["Manchester","Greater Manchester","United Kingdom"],
+      "address":{"@type":"PostalAddress","streetAddress":"Flat 66 West View Court, West View Road","addressLocality":"Manchester","postalCode":"M22 4LG","addressCountry":"GB"},
+      "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}]
+    },
+    {
+      "@type":"AutoDealer",
+      "name":"24/7 Reliable Jo Limited — Car Sales",
+      "url":"https://reliablejowebsite.pages.dev/#cars",
+      "telephone":"+447491011978",
+      "address":{"@type":"PostalAddress","streetAddress":"Flat 66 West View Court, West View Road","addressLocality":"Manchester","postalCode":"M22 4LG","addressCountry":"GB"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Are you available 24/7?","acceptedAnswer":{"@type":"Answer","text":"Yes. Early mornings, late nights, weekends and overnight runs — call or message any time and we will tell you the soonest we can be there."}},
+        {"@type":"Question","name":"Can you handle pallets and business freight?","acceptedAnswer":{"@type":"Answer","text":"Yes. We collect off forklifts, wrap and strap palletised loads, and run regular deliveries for traders, warehouses and shops."}},
+        {"@type":"Question","name":"Do you cover long distances?","acceptedAnswer":{"@type":"Answer","text":"Yes. Local jobs across Greater Manchester and long-distance runs anywhere in the UK, including England, Scotland, Wales and Northern Ireland."}}
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>
